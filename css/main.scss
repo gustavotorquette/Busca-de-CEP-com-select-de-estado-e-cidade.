@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin box-shaddow(){
+  box-shadow: 3px 3px 4px 1px #ccc;
+}
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background: #f5f5f5;
+  font-family: 'roboto';
+}
+
+.container{
+  background: #FFF;
+  width: 100%;
+  min-height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 960px;
+  margin:100px auto;
+  padding: 30px;
+
+  @include box-shaddow();
+
+  
+
+  .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+      flex: 1;
+      padding: 10px;
+      font-size: 2.0rem;
+    }
+    button{
+      width: 150px;
+      padding: 15px;
+      border: 0;
+      background: #069;
+      color: #FFF;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
+
+  .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-group{
+      margin-top: 20px;
+      width: 400px;
+      label{
+        font-size: 2.0rem;
+        width: 100%;
+        flex: 1;
+        display: flex;
+      }
+      input{
+        padding: 20px;
+        width: 100%;
+        font-size: 1.8rem;
+      }
+      select{
+        width: 100%;
+        padding: 20px;
+        height: 60px;
+        font-size: 1.3rem;
+      }
+    }
+  
+
+    .livro{
+      width: 250px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      margin: 10px;
+      font-size: 1.6rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s;
+      &:hover{
+        @include box-shaddow();
+      }
+
+    }
+  }
+
+
+
+
+}
